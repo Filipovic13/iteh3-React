@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.navBar {
+     height: 100px;
+     background-color: #e17f26;
+     text-align: center;
+     padding-top: 1px;
+     padding-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBar img {
+     display: block;
+     margin: auto;
+     height: 90px;
+     margin-bottom: 1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navBar a {
+     font-size: large;
+     padding: 20px;
+     color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card {
+     border-style: solid;
+     border-width: 2px;
+     border-color: rgb(211, 211, 211);
+     max-width: 350px;
+     margin: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.cardNamePrice {
+     display: flex;
+     margin-left: 23px;
+     display: grid;
+     grid-auto-flow: column;
+     grid-column-gap: 100px;
+}
+.cardAdd {
+     display: flex;
+     margin-left: 23px;
+     display: grid;
+     grid-auto-flow: column;
+     grid-column-gap: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.items {
+     display: flex;
+     margin: 25px;
+}
+
+.hr {
+     width: 300px;
 }
