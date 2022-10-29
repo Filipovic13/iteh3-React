@@ -6,6 +6,11 @@
      padding-bottom: 20px;
 }
 
+.cart {
+     float: right;
+     margin-right: 10px;
+}
+
 .navBar img {
      display: block;
      margin: auto;
@@ -17,6 +22,7 @@
      font-size: large;
      padding: 20px;
      color: white;
+     margin-left: 20px;
 }
 
 .card {
@@ -26,6 +32,16 @@
      max-width: 350px;
      margin: 50px;
 }
+.card button {
+     padding: 0;
+     border: none;
+     background: none;
+}
+
+.card img {
+     height: 300px;
+     width: 300px;
+}
 
 .cardNamePrice {
      display: flex;
@@ -33,20 +49,30 @@
      display: grid;
      grid-auto-flow: column;
      grid-column-gap: 100px;
+     height: 87px;
+     width: 277px;
 }
 .cardAdd {
      display: flex;
      margin-left: 23px;
      display: grid;
      grid-auto-flow: column;
-     grid-column-gap: 150px;
+     grid-column-gap: 100px;
+     height: 62px;
+     width: 277px;
 }
 
 .items {
      display: flex;
+     flex-direction: row;
      margin: 25px;
+}
+@media (max-width: 800px) {
+     .items {
+          flex-direction: column;
+     }
 }
 
 .hr {
-     width: 300px;
+     width: 250px;
 }
