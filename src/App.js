@@ -1,12 +1,15 @@
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Items from "./components/Items";
+import { Cart } from "./components/Cart";
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
      //let cartNum = 0;
-     const [cartNum, addInCart] = useState(0);
-     const products = [
+     const [cartNum, increaseCartNum] = useState(0);
+     const [cartItems, addToCart] = useState([]);
+     const [products] = useState([
           {
                id: 1,
                name: "T-Shirt",
@@ -28,17 +31,39 @@ function App() {
                image: "https://www.kmgshop.com/wp-content/uploads/2013/06/Bracelet-Product.jpg?v=9ee9d85a86f0",
                amount: 0,
           },
-     ];
-     function addItem(name) {
-          console.log("Dodat proizvod: " + name);
-          addInCart(cartNum + 1);
-          console.log(cartNum);
+     ]);
+     function refreshCart() {
+          let newItems = products.filter((prod) => prod.amount > 0);
+          addToCart(newItems);
      }
+     function addItem(name, id) {
+          console.log("Dodat proizvod: " + name);
+          increaseCartNum(cartNum + 1);
+          // console.log(cartNum);
+          products.forEach((prod) => {
+               if (prod.id === id) {
+                    prod.amount++;
+               }
+          });
+          refreshCart();
+     }
+
      return (
-          <div className="App">
+          <BrowserRouter className="App">
                <NavBar cartNum={cartNum} />
-               <Items products={products} addItem={addItem} />
-          </div>
+               <Routes>
+                    <Route
+                         path="/"
+                         element={
+                              <Items products={products} addItem={addItem} />
+                         }
+                    />
+                    <Route
+                         path="/cart"
+                         element={<Cart products={cartItems} />}
+                    />
+               </Routes>
+          </BrowserRouter>
      );
 }
 
