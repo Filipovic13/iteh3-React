@@ -5,7 +5,12 @@ const Items = ({ products, addItem }) => {
      return (
           <div className="items">
                {products.map((item) => (
-                    <OneItem product={item} key={item.id} addItem={addItem} />
+                    <OneItem
+                         product={item}
+                         key={item.id}
+                         addItem={addItem}
+                         inCart={0}
+                    />
                ))}
                {/* {products.map((item) => {
                     return <OneItem product={item} />;
