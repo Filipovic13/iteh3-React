@@ -1,14 +1,15 @@
 import React from "react";
 import navLogo from "../img/logo.png";
 import { FiShoppingCart } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function NavBar({ cartNum }) {
      return (
           <>
                <div className="navBar">
                     <img className="logoNavBar" src={navLogo} alt="logoNav" />
-                    <a href="/">Shop Now</a>
-                    <a href="/">Cart</a>
+                    <Link to="/">Shop Now</Link>
+                    <Link to="/cart">Cart</Link>
 
                     <div className="cart">
                          {" "}
