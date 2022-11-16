@@ -1,78 +1,141 @@
 .navBar {
-     height: 100px;
-     background-color: #e17f26;
-     text-align: center;
-     padding-top: 1px;
-     padding-bottom: 20px;
+  height: 100px;
+  background-color: #e17f26;
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 20px;
 }
 
 .cart {
-     float: right;
-     margin-right: 10px;
+  float: right;
+  margin-right: 10px;
 }
 
 .navBar img {
-     display: block;
-     margin: auto;
-     height: 90px;
-     margin-bottom: 1px;
+  display: block;
+  margin: auto;
+  height: 90px;
+  margin-bottom: 1px;
 }
 
 .navBar a {
-     font-size: large;
-     padding: 20px;
-     color: white;
-     margin-left: 20px;
+  font-size: large;
+  padding: 20px;
+  color: white;
+  margin-left: 20px;
 }
 
 .card {
-     border-style: solid;
-     border-width: 2px;
-     border-color: rgb(211, 211, 211);
-     max-width: 350px;
-     margin: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(211, 211, 211);
+  max-width: 350px;
+  margin: 50px;
 }
 .card button {
-     padding: 0;
-     border: none;
-     background: none;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 .card img {
-     height: 300px;
-     width: 300px;
+  height: 300px;
+  width: 300px;
 }
 
 .cardNamePrice {
-     display: flex;
-     margin-left: 23px;
-     display: grid;
-     grid-auto-flow: column;
-     grid-column-gap: 100px;
-     height: 87px;
-     width: 277px;
+  display: flex;
+  margin-left: 23px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 100px;
+  height: 87px;
+  width: 277px;
 }
 .cardAdd {
-     display: flex;
-     margin-left: 23px;
-     display: grid;
-     grid-auto-flow: column;
-     grid-column-gap: 100px;
-     height: 62px;
-     width: 277px;
+  display: flex;
+  margin-left: 23px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 100px;
+  height: 62px;
+  width: 277px;
 }
 
 .items {
-     display: flex;
-     flex-direction: row;
-     margin: 25px;
+  display: flex;
+  flex-direction: row;
+  margin: 25px;
 }
 @media (max-width: 800px) {
-     .items {
-          flex-direction: column;
-     }
+  .items {
+    flex-direction: column;
+  }
 }
 
 .hr {
-     width: 250px;
+  width: 250px;
+}
+
+.input-containerr {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 5px;
+  align-items: center;
+}
+input[type="text"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  background-color: #4d79ff; /* Green */
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 4px 2px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.input-containerr {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 5px;
+  align-items: center;
+}
+input[type="text"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.photo {
+  height: 200px;
+  width: 400px;
+  border: 3px solid #ddd;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 5px;
+  align-items: center;
+}
+
+.label {
+  color: white;
 }
